@@ -55,5 +55,63 @@
             </div>
         </div>
     </section>
+
+        <!-- button section -->
+    <section class="mx-auto mt-14 mb-4 w-11/12 container">
+        <div class="button bg-white shadow-sm p-6 rounded-lg gap-2 flex">
+            <button id="btn-all" class="btn btn-primary filter-btn w-auto">All</button>
+            <button id="btn-open" class="btn filter-btn font-medium w-auto">Open</button>
+            <button id="btn-close" class="btn filter-btn font-medium w-auto">Close</button>
+        </div>
+
+    </section>
+
+    <!-- issues section -->
+    <section class="mx-auto mt-14 mb-4 w-11/12 container pb-[60px]">
+        <div class="issues">
+            <div class="issue-status border bottom-1 border-[#E4E4E7] p-4 sm:p-6 bg-white rounded-t-lg 
+                flex flex-col lg:flex-row 
+                items-start lg:items-center 
+                justify-between gap-4">
+
+                <!-- LEFT -->
+                <div class="issue-left flex items-center gap-3">
+                    <img src="assets/Aperture.png" class="h-10 w-auto" />
+
+                    <div>
+                        <h3 class="font-semibold primary-color"><span id="total-issues"
+                                class="font-semibold primary-color"></span> issues</h3>
+                        <p class="secondary-color text-sm">
+                            Track and manage your project issues
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="issue-right flex items-center gap-4 flex-wrap">
+
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle text-green-500 text-xs"></i>
+                        <p class="text-sm">Open</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle text-purple-500 text-xs"></i>
+                        <p class="text-sm">Close</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="spinner" class="flex justify-center items-center h-20">
+                <span class="loading loading-spinner loading-xl"></span>
+            </div>
+
+
+            <div id="case-container" class="grid grid-cols-1 md:grid-cols-4 gap-3 p-6 shadow-sm rounded-b-lg">
+
+            </div>
+        </div>
+    </section>
 </body>
 </html>
