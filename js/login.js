@@ -10,7 +10,7 @@ document.getElementById('sign-in').addEventListener('click', function () {
     if (userName === 'admin' && pin === 'admin123') {
         alert('Login Successful');
         // navigate to homepage
-        window.location.assign('/home.html');
+        window.location.assign('home.html');
     } else {
         alert('Login Failed');
         return;
