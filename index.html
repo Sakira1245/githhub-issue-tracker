@@ -14,109 +14,43 @@
     <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
 </head>
 <body class="geist background">
-     <!-- navbar -->
-    <section>
-        <div class="bg-white shadow-sm w-full px-4 sm:px-6 lg:px-20 py-3">
+        <section class="mx-auto min-h-screen max-w-md py-10 px-4 sm:px-8 md:px-16">
+    <fieldset class="fieldset bg-white border-base-300 rounded-box w-full border p-4">
 
-            <div class="navbar flex flex-col lg:flex-row gap-4 justify-between">
-
-                <!-- LEFT -->
-                <div class="navbar-start flex items-center gap-1">
-                    <img src="assets/github-logo.png" alt="" class="h-8">
-                    <button class="btn btn-ghost text-sm sm:text-lg">
-                        GitHub Issues Tracker
-                    </button>
-                </div>
-
-                <!-- RIGHT -->
-                <div class="navbar-end flex flex-col sm:flex-row gap-3 w-full lg:w-auto lg:justify-end">
-
-                    <!-- Search -->
-                    <label class="input input-bordered flex items-center gap-2 w-full sm:w-auto">
-                        <svg class="h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
-                                stroke="currentColor">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.3-4.3"></path>
-                            </g>
-                        </svg>
-                        <input id="input-search" type="search" placeholder="Search issues"
-                            class="w-full sm:w-48 lg:w-64" />
-                    </label>
-
-                    <!-- Button -->
-                    <a class="btn btn-primary w-full sm:w-auto">
-                        <i class="fa-solid fa-plus text-white"></i>
-                        New Issue
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-        <!-- button section -->
-    <section class="mx-auto mt-14 mb-4 w-11/12 container">
-        <div class="button bg-white shadow-sm p-6 rounded-lg gap-2 flex">
-            <button id="btn-all" class="btn btn-primary filter-btn w-auto">All</button>
-            <button id="btn-open" class="btn filter-btn font-medium w-auto">Open</button>
-            <button id="btn-close" class="btn filter-btn font-medium w-auto">Close</button>
+        <div class="logo grid justify-items-center p-4 sm:p-6 md:p-8">
+            <img src="assets/github-logo.png" class="w-16 sm:w-20">
+            <h3 class="primary-color font-semibold mt-6">GitHub Issues Tracker</h3>
+            <p class="secondary-color font-normal text-center">Sign in to manage your issues</p>
         </div>
 
-    </section>
+        <div class="space-y-2">
+            <label class="label primary-color font-medium">Username</label>
+            <input id="input-name" type="text" class="input w-full" placeholder="Enter Username" />
+            <p class="label default">Default: admin</p><br>
 
-    <!-- issues section -->
-    <section class="mx-auto mt-14 mb-4 w-11/12 container pb-[60px]">
-        <div class="issues">
-            <div class="issue-status border bottom-1 border-[#E4E4E7] p-4 sm:p-6 bg-white rounded-t-lg 
-                flex flex-col lg:flex-row 
-                items-start lg:items-center 
-                justify-between gap-4">
+            <label class="label primary-color font-medium">Password</label>
+            <input id="input-password" type="password" class="input w-full" placeholder="Enter Password" />
+            <p class="label default">Default: admin123</p>
+        </div>
 
-                <!-- LEFT -->
-                <div class="issue-left flex items-center gap-3">
-                    <img src="assets/Aperture.png" class="h-10 w-auto" />
+        <button class="btn btn-primary mt-4 w-full" id="sign-in">Sign In</button>
 
-                    <div>
-                        <h3 class="font-semibold primary-color"><span id="total-issues"
-                                class="font-semibold primary-color"></span> issues</h3>
-                        <p class="secondary-color text-sm">
-                            Track and manage your project issues
-                        </p>
-                    </div>
-                </div>
+        <div class="flex items-center mt-6">
+            <div class="flex-grow h-[1px] bg-[#E4E4E7]"></div>
+            <span class="mx-3 text-sm text-gray-500">Or</span>
+            <div class="flex-grow h-[1px] bg-[#E4E4E7]"></div>
+        </div>
 
-                <!-- RIGHT -->
-                <div class="issue-right flex items-center gap-4 flex-wrap">
-
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-circle text-green-500 text-xs"></i>
-                        <p class="text-sm">Open</p>
-                    </div>
-
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-circle text-purple-500 text-xs"></i>
-                        <p class="text-sm">Close</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div id="spinner" class="flex justify-center items-center h-20">
-                <span class="loading loading-spinner loading-xl"></span>
-            </div>
-
-
-            <div id="case-container" class="grid grid-cols-1 md:grid-cols-4 gap-3 p-6 shadow-sm rounded-b-lg">
-
+        <div class="grid justify-items-center mt-6 gap-2 text-center">
+            <p class="secondary-color">Demo Credentials:</p>
+            <div class="background p-4 sm:p-6 w-full rounded-lg">
+                <p><span class="font-bold">Username:</span> admin</p>
+                <p><span class="font-bold">Password:</span> admin123</p>
             </div>
         </div>
-    </section>
 
-     <!-- Open the modal using ID.showModal() method -->
-    <dialog id="issue-details" class="modal">
-
-    </dialog>
+    </fieldset>
+</section>
+    <script src="js/login.js"></script>
 </body>
 </html>
