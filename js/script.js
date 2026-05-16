@@ -88,3 +88,43 @@ document.getElementById('input-search').addEventListener('input', () => {
     displayIssues(filtered);
     manageSpinner(false);
 });
+
+// tabs
+
+const removeActive = () => {
+    const btns = document.querySelectorAll('.filter-btn');
+    btns.forEach(btn =>
+        btn.classList.remove('btn-primary')
+    );
+}
+
+const btnAll = document.getElementById('btn-all');
+const btnOpen = document.getElementById('btn-open');
+const btnClose = document.getElementById('btn-close');
+
+// show all issues
+
+btnAll.classList.add('btn-primary');
+
+btnAll.onclick = () => {
+    removeActive();
+    btnAll.classList.add('btn-primary');
+    displayIssues(allIssues);
+};
+
+// show open
+
+btnOpen.onclick = () => {
+    removeActive();
+    btnOpen.classList.add('btn-primary');
+    displayIssues(allIssues.filter(issue => issue.status.toLowerCase() === "open"));
+    manageSpinner(false);
+};
+
+// show close
+btnClose.onclick = () => {
+    removeActive();
+    btnClose.classList.add('btn-primary');
+    displayIssues(allIssues.filter(issue => issue.status.toLowerCase() === "closed"));
+    manageSpinner(false);
+};
