@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issues Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
+</head>
+<body class="geist background">
+     <!-- navbar -->
+    <section>
+        <div class="bg-white shadow-sm w-full px-4 sm:px-6 lg:px-20 py-3">
+
+            <div class="navbar flex flex-col lg:flex-row gap-4 justify-between">
+
+                <!-- LEFT -->
+                <div class="navbar-start flex items-center gap-1">
+                    <img src="assets/github-logo.png" alt="" class="h-8">
+                    <button class="btn btn-ghost text-sm sm:text-lg">
+                        GitHub Issues Tracker
+                    </button>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="navbar-end flex flex-col sm:flex-row gap-3 w-full lg:w-auto lg:justify-end">
+
+                    <!-- Search -->
+                    <label class="input input-bordered flex items-center gap-2 w-full sm:w-auto">
+                        <svg class="h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input id="input-search" type="search" placeholder="Search issues"
+                            class="w-full sm:w-48 lg:w-64" />
+                    </label>
+
+                    <!-- Button -->
+                    <a class="btn btn-primary w-full sm:w-auto">
+                        <i class="fa-solid fa-plus text-white"></i>
+                        New Issue
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
