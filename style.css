@@ -1,0 +1,89 @@
+        .geist {
+            font-family: "Geist", sans-serif;
+        }
+
+        .primary-color {
+            color: #1F2937;
+        }
+
+        .secondary-color {
+            color: #64748B;
+        }
+
+        .default {
+            color: #4A00FF;
+        }
+
+        .background {
+            background-color: #F8FAFC;
+        }
+
+        .green-text {
+            color: #00A96E;
+        }
+
+        .green-bg {
+            background-color: #DEFCE8;
+        }
+
+        .green-stroke {
+            border-color: #BBF7D0;
+            border-width: 1px;
+        }
+
+        .bug {
+            background-color: #FEECEC;
+            color: #EF4444;
+            border: solid 2px #FECACA;
+        }
+
+        .help {
+            color: #D97706;
+            background-color: #FFF8DB;
+            border: solid 2px #FDE68A;
+        }
+
+        .enhance {
+            background-color: #DEFCE8;
+            color: #00A96E;
+            border: solid 2px #BBF7D0;
+
+        }
+
+        .first-issue {
+            background-color: #4f18db17;
+            color: rgb(52, 17, 226);
+            border: solid 2px #4608e469;
+        }
+
+        .doc {
+            background-color: rgba(226, 17, 163, 0.084);
+            color: rgb(226, 17, 163);
+            border: solid 2px rgba(226, 17, 163, 0.342);
+        }
+
+        .priority-medium {
+            background-color: #FFF6D1;
+            color: #F59E0B;
+        }
+
+
+        .priority-low {
+            background-color: #EEEFF2;
+            color: #9CA3AF;
+        }
+
+        .priority-high {
+            background-color: #FEECEC;
+            color: #EF4444;
+        }
+
+        .open-status {
+            background-color: #00A96E;
+        }
+
+        .close {
+            background-color: #A855F7;
+        }
+
+        
