@@ -71,3 +71,20 @@ const displayIssues = (issues) => {
                 </div>`;
     })
 }
+
+// search functionality
+
+document.getElementById('input-search').addEventListener('input', () => {
+    const input = document.getElementById('input-search');
+    const searchValue = input.value.trim().toLowerCase();
+
+    const container = document.getElementById('case-container');
+    container.innerHTML = ""; //  clear UI (IMPORTANT)
+
+    const filtered = allIssues.filter(issue =>
+        issue.title.toLowerCase().includes(searchValue)
+    );
+
+    displayIssues(filtered);
+    manageSpinner(false);
+});
