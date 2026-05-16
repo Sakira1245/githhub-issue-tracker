@@ -174,3 +174,30 @@ btnClose.onclick = () => {
     displayIssues(allIssues.filter(issue => issue.status.toLowerCase() === "closed"));
     manageSpinner(false);
 };
+
+// issue status
+const createElements = (arr) => {
+
+    return arr.map(el => {
+
+        if (el === "bug") {
+            return `<span class="bug px-2 py-[6px] text-xs rounded-full"><i class="fa-solid fa-bug"></i> ${el.toUpperCase()}</span>`;
+        }
+
+        if (el === "help wanted") {
+            return `<span class="help px-2 py-[6px] text-xs rounded-full"><i class="fa-solid fa-life-ring"></i> ${el.toUpperCase()}</span>`;
+        }
+
+        if (el === "documentation") {
+            return `<span class="doc px-2 py-[6px] text-xs rounded-full"><i class="fa-solid fa-file" style="color: rgb(226, 17, 163);"></i> ${el.toUpperCase()}</span>`;
+        }
+
+        if (el === "enhancement") {
+            return `<span class="enhance px-2 py-[6px] text-xs rounded-full"><i class="fa-solid fa-wand-magic-sparkles" style="color: #00A96E;"></i> ${el.toUpperCase()}</span>`;
+        }
+
+        // default
+        return `<span class="first-issue px-2 py-[6px] text-xs rounded-full"><i class="fa-solid fa-circle-exclamation" style="color: rgb(52, 17, 226);"></i> ${el.toUpperCase()}</span>`;
+
+    }).join("");
+};
